@@ -26,7 +26,7 @@
     path: '/admin',
     name: 'admin',
     icon: 'crown',
-
+    access: '4',
     component: './Admin',
     routes: [
       {
