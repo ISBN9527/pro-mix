@@ -4,7 +4,9 @@ import { Card, Typography, Alert } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { useIntl } from 'umi';
 
-export default (): React.ReactNode => {
+export default (props: {
+  children: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
+}): React.ReactNode => {
   const intl = useIntl();
   return (
     <PageHeaderWrapper
@@ -27,6 +29,7 @@ export default (): React.ReactNode => {
             marginBottom: 48,
           }}
         />
+        {props?.children}
         <Typography.Title level={2} style={{ textAlign: 'center' }}>
           <SmileTwoTone /> Ant Design Pro <HeartTwoTone twoToneColor="#eb2f96" /> You
         </Typography.Title>

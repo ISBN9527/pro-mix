@@ -19,21 +19,21 @@
     path: '/welcome',
     name: 'welcome',
     icon: 'smile',
-    access: '4',
+
     component: './Welcome',
   },
   {
     path: '/admin',
     name: 'admin',
     icon: 'crown',
-    access: '4',
+
     component: './Admin',
     routes: [
       {
         path: '/admin/sub-page',
         name: 'sub-page',
         icon: 'smile',
-        component: './Welcome',
+        component: './Test',
       },
     ],
   },
