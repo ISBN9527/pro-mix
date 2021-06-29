@@ -128,7 +128,17 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
           </Link>,
         ]
       : [],
-    menuHeaderRender: undefined,
+    menuHeaderRender: (logo, title) => (
+      <div
+        id="customize_menu_header"
+        onClick={() => {
+          window.open('https://remaxjs.org/');
+        }}
+      >
+        {logo}
+        {title}
+      </div>
+    ),
     // 自定义 403 页面
     // unAccessible: <div>unAccessible</div>,
     ...initialState?.settings,

@@ -44,6 +44,27 @@
     component: './TableList',
   },
   {
+    path: '/one',
+    name: 'one',
+    component: './One',
+    routes: [
+      { redirect: '/one/two/three' },
+      {
+        path: '/one/two',
+        name: 'two',
+        // component: './One/Two',
+        routes: [
+          {
+            path: '/one/two/three',
+            name: 'three',
+            component: './One/Three',
+          },
+        ],
+      },
+    ],
+  },
+
+  {
     path: '/',
     redirect: '/welcome',
   },
